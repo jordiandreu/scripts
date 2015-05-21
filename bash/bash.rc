@@ -1,0 +1,10 @@
+#called=$_
+#[[ $called != $0 ]] && echo "Script is being sourced" || echo "Script is being run"
+#echo "Exporting resources from ${BASH_SOURCE[@]}"
+
+echo "######################"
+echo "# Resources Exported #"
+echo "######################"
+
+. bash.git.rc
+. bash.path.rc

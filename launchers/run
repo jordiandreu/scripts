@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Gets the name of this script and adds a .py extension:
+APPNAME=${0##*/}.py
+# Gets current folder:
+PWD=$(exec pwd)
+
+echo "Current folder: $PWD"
+echo "Script name with added extension: $APPNAME"
+
+python $PWD/$APPNAME
+
+

@@ -1,0 +1,22 @@
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+function path(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
+
+function ppath(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PYTHONPATH
+    IFS=$old
+}
+
+function ldpath(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $LD_LIBRARY_PATH
+    IFS=$old
+}
