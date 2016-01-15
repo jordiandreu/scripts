@@ -43,6 +43,7 @@ for i in "$cmd01" "$cmd02" "$cmd03"
 do
   cmdall="${cmdall}$i; "
 done
+
 echo "Remote command:"
 echo $cmdall
 echo ""
@@ -52,7 +53,8 @@ do
     echo "Remote processing @ $host"
     echo "+++++++++++++++++"
     echo "User: $user"
-    ssh $user@$host $cmdall
+#    ssh $user@$host $cmdall
+    ssh $user@$host "bash -s" < get_info_sys.sh
     echo "command executed. Logging out from $host"
     echo ""
 done

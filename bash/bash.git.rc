@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "Exporting resources from ${BASH_SOURCE[0]}"
 
 # git repository branch at command promp

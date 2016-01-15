@@ -14,7 +14,7 @@ if [ -d $ALFRESCO_HOME ]; then
 echo "WARNING: folder $ALFRESCO_HOME already exists!"
 echo "removing folder..."
 sudo umount $ALFRESCO_HOME
-sudo rm -rf $ALFRESCO_HOME
+sudo rmdir $ALFRESCO_HOME
 fi
 echo "creating folder..."
 sudo mkdir $ALFRESCO_HOME

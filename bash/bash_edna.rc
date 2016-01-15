@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Configuration required for EDNA-MX software
+
+### CCP4 6.5 ###
+source /home/jandreu/sw/ccp4-6.5/bin/ccp4.setup-sh
+
+### Phenix 1.9-1962 ###
+source /home/jandreu/sw/phenix-1.9-1692/phenix_env.sh
+
+### XDS ###
+export PATH=/home/jandreu/sw/XDS-INTEL64_Linux_x86_64:$PATH
+export KMP_STACKSIZE=8m
+
+### BEST 4.1.0 ###
+export besthome=/home/jandreu/sw/BEST_v4.1.0
+
+### MOSFLM ###
+export PATH=/home/jandreu/sw/MOSFLM:$PATH
+
+### RADDOSE ###
+export PATH=/home/jandreu/sw/RADDOSE/bin:$PATH
+export LD_LIBRARY_PATH=/home/jandreu/sw/RADDOSE/lib:$LD_LIBRARY_PATH
+
+### EDNA2Html ###
+export PATH=/home/jandreu/sw/EDNA2html_v0.0.9a:$PATH
+
+### GLE ###
+export PATH=/home/jandreu/sw/gle_v4.2.4b/bin:$PATH
+export LD_LIBRARY_PATH=/home/jandreu/sw/gle_v4.2.4b/lib:$LD_LIBRARY_PATH
+
+### FabIO ###
+export PYTHONPATH=/home/jandreu/sw/fabio-0.1.4/build/lib.linux-x86_64-2.7/fabio/:$PYTHONPATH

@@ -1,10 +1,13 @@
-#called=$_
+#!/usr/bin/env bash
+echo "Reading personal bash.rc file..."
+called=$_
 #[[ $called != $0 ]] && echo "Script is being sourced" || echo "Script is being run"
 #echo "Exporting resources from ${BASH_SOURCE[@]}"
 
-echo "######################"
-echo "# Resources Exported #"
-echo "######################"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd $DIR
 
 . bash.git.rc
 . bash.path.rc
+. bash.sardana.rc
+. bash.tango.rc
