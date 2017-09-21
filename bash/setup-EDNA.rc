@@ -2,7 +2,7 @@
 #########################################################################
 # Configuring EDNA enviromental variables @ ALBA
 #########################################################################
-export EDNA_HOME=/home/jandreu/Development/git/GS/EDNA-MX
+export EDNA_HOME=/home/jandreu/Development/EDNA/EDNA-MX
 export EDNA_SITE=ALBA
 export PATH=$EDNA_HOME/kernel/bin:$PATH
 #alias edt=$EDNA_HOME/kernel/bin/edna-test-launcher.py

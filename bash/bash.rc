@@ -1,13 +1,41 @@
 #!/usr/bin/env bash
 echo "Reading personal bash.rc file..."
-called=$_
+#called=$_
 #[[ $called != $0 ]] && echo "Script is being sourced" || echo "Script is being run"
 #echo "Exporting resources from ${BASH_SOURCE[@]}"
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-cd $DIR
 
-. bash.git.rc
-. bash.path.rc
-. bash.sardana.rc
-. bash.tango.rc
+LOCAL_RC="/home/jandreu/Development/scripts/bash"
+BL13_RC="/beamlines/bl13/controls/jandreu/scripts/bash"
+
+# Exporting resources
+HOST=`eval hostname`
+echo logged to $HOST
+
+
+# ALL machines
+. ${DIR}/bash.path.rc
+
+if [ $HOST = 'pc263' ]; then
+    . ${DIR}/bash.local.rc
+    . ${DIR}/bash.alias.rc
+    . ${DIR}/bash.git.rc
+    . ${DIR}/bash.tango.rc
+    #. ${DIR}/bash.sardana.rc
+    . ${DIR}/bash.taurus.rc
+    . ${DIR}/bash.lima.rc
+
+elif [ $HOST = 'claexperimentsdev' ]; then
+    . ${DIR}/bash.slurm.rc
+    . ${DIR}/bash.prompt.rc
+
+else
+    echo unknown host
+fi
+
+
+
+
+
+
