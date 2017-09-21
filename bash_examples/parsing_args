@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Calling parameters: $*"
+srun echo "${@:3}"
+
+#
+#output expected:
+#
+#Calling parameters: 1 2 3 4 5 6
+#3 4 5 6
+#

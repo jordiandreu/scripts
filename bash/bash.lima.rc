@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+
+
+INSTALL_DIR=/home/jandreu/Development/LImA/Lima/install
+export PYTHONPATH=$INSTALL_DIR:$PYTHONPATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$INSTALL_DIR/Lima/lib
+
+
+LIMA_TEST_MODULE=/home/jandreu/Development/LImA/LimaTestSuite/src
+export PYTHONPATH=$LIMA_TEST_MODULE:$PYTHONPATH
+

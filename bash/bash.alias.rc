@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+# Exporting local applications
+#PATH=$PATH:/local/bin
+
+
+# mounting network storage devices
+alias storage="sudo /usr/local/bin/mountshares.sh"
+alias alfresco="/home/jandreu/Development/git-personal/scripts/utils/mnt_alfresco.sh"
+
+# remote acces
+alias ipctest01s="ssh sicilia@ipctest01"
+alias ictlael01s="ssh sicilia@ictlael01"
+alias ctidmb6s="ssh sicilia@ctidmb6"
+alias idiccd01s="ssh sicilia@idiccd01"
+
+alias c01="ssh $USER@controls01"
+alias c02="ssh $USER@controls02"
+alias c01s="ssh sicilia@controls01"
+alias c02s="ssh sicilia@controls02"
+
+alias pcbl1301s="ssh sicilia@pcbl1301"
+alias pcbl1303s="ssh sicilia@pcbl1303"
+alias pcbl1304s="ssh sicilia@pcbl1304"
+alias pcbl1305s="ssh sicilia@pcbl1305"
+alias pcbl1301="ssh opbl13@pcbl1301"
+alias pcbl1303="ssh opbl13@pcbl1303"
+alias pcbl1304="ssh opbl13@pcbl1304"
+alias pcbl1305="ssh opbl13@pcbl1305"
+alias ibl1301s="ssh sicilia@ibl1301"
+alias ibl1302s="ssh sicilia@ibl1302"
+alias ibl1301="ssh opbl13@ibl1301"
+alias ibl1302="ssh opbl13@ibl1302"
+alias bl13ccd01s="ssh sicilia@ctbl13ccd01"
+alias bl13arch01s="ssh sicilia@ctbl13arch01"
+
+
+alias mxcubes="ssh sicilia@bl13mxcube"
+alias mxcube="ssh $USER@bl13mxcube"
+
+alias cluster="ssh $USER@claexperimentsdev"
+alias clusters="ssh sicilia@claexperimentsdev"
+
+export EDITOR=kwrite
+
+function upbl13(){
+    rsync -ave ssh $1 opbl13@pcbl1301:/beamlines/bl13/controls/$2
+}
+
+
+#PyCharm
+export PYCHARM_JDK="/usr/java/jre1.8.0_60/"

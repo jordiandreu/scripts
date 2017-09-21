@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Check in which host are we running
+HOST=`eval hostname`
+
+if [ $HOST = 'pc263' ]; then
+    echo running on host: $HOST
+else
+    echo unknown host
+fi
+
+ARCH=`eval arch`
+PLATFORM=`eval uname`
+
+echo architecture: $ARCH
+echo platform: $PLATFORM
+
+if [ $PLATFORM = 'Linux' ]; then
+    if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        echo OS name: $NAME
+        echo OS version: $VERSION_ID
+#    elif [ -f /etc/SuSE-release ]; then
+#        echo OS name: openSuSE
+#        echo OS version: $VERSION
+    fi
+fi

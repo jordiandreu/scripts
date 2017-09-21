@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+SLURMPATH="/home/jandreu/Development/scripts/slurm"
+
+# export local slurm environment paths
+export PATH=$SLURMPATH:$PATH
+
+#export POST_PROCESSING_SCRIPTS_ROOT="/home/jandreu/Development/scripts/etc"
+export POST_PROCESSING_SCRIPTS_ROOT="/home/jandreu/Development/BL13-XALOC/bl13_processing"

@@ -5,9 +5,12 @@ APPNAME=${0##*/}.py
 # Gets current folder:
 PWD=$(exec pwd)
 
+ARGS=${@}
+NARGS=$#
 echo "Current folder: $PWD"
 echo "Script name with added extension: $APPNAME"
-
-python $PWD/$APPNAME
+echo "Number of arguments: $NARGS"
+echo "Arguments: $ARGS"
+#python $PWD/$APPNAME
 
 

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+export PATH=$PATH:/home/jandreu/bin:/home/jandreu/.local/bin

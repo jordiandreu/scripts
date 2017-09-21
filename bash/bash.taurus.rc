@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo "Exporting resources from ${BASH_SOURCE[0]}"
+
+#SARPATH="/home/jandreu/Development/ControlSystem/sardana/scripts"
+#SARPYTHONPATH="/home/jandreu/Development/ControlSystem/sardana/src"
+TAUPATH="/home/jandreu/Development/ControlSystem/taurus/scripts"
+TAUPYTHONPATH="/home/jandreu/Development/ControlSystem/taurus/lib"
+
+# export local sardana and taurus environment paths
+export PATH=$TAUPATH:$PATH
+export PYTHONPATH=$TAUPYTHONPATH:$PYTHONPATH
