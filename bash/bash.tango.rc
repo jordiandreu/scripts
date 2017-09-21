@@ -1,23 +1,20 @@
 #!/usr/bin/env bash
-# Symbolic Link to provide Tango8 features to my locaL machine:
+# Symbolic Link to provide Tango8 features to my local machine:
+echo "Exporting resources from ${BASH_SOURCE[0]}"
 
-JENKINS=/siciliarep/jenkins/ct64suse131/jobs
+#JENKINS=/siciliarep/jenkins/ct64suse131/jobs
+#
+#ZMQ_LIB=$JENKINS/Lib_ZMQ/3.2.4/lib
+#OMNI_LIB=$JENKINS/Lib_omniORB/4.1.6/lib
+#TANGO_LIB=$JENKINS/Lib_Tango8/lib64
+#
+#PYTANGO=$JENKINS/Lib_PyTango/8.1.2/lib64/python2.7/site-packages
+#
+#export LD_LIBRARY_PATH=$ZMQ_LIB:$OMNI_LIB:$TANGO_LIB:$LD_LIBRARY_PATH
+#export PYTHONPATH=$PYTANGO:$PYTHONPATH
 
-ZMQ_LIB=$JENKINS/Lib_ZMQ/3.2.4/lib
-OMNI_LIB=$JENKINS/Lib_omniORB/4.1.6/lib
-TANGO_LIB=$JENKINS/Lib_Tango8/lib64
 
-PYTANGO=$JENKINS/Lib_PyTango/8.1.2/lib64/python2.7/site-packages
-
-
-#TAURUS=$JENKINS/Lib_Taurus/taurus/lib/python2.7/site-packages
-#SARDANA=$JENKINS/Lib_Sardana/sardana/lib/python2.7/site-packages
-
-#TAURUS_BIN=$JENKINS/Lib_Taurus/taurus/bin
-#SARDANA_BIN=$JENKINS/Lib_Sardana/sardana/bin
-
-export LD_LIBRARY_PATH=$ZMQ_LIB:$OMNI_LIB:TANGO_LIB:$LD_LIBRARY_PATH
-export PYTHONPATH=$PYTANGO:$TAURUS:$SARDANA:$PYTHONPATH
-#export PATH=$TAURUS_BIN:$SARDANA_BIN:$PATH
-
-export TANGO_HOST=controls01:10000
+alias thc01="export TANGO_HOST=controls01:10000; echo DB controls01 exported!"
+alias thc02="export TANGO_HOST=controls02:10000; echo DB controls02 exported!"
+#alias tha01="export TANGO_HOST=alba01:10000"
+alias tha02="export TANGO_HOST=alba02:10000; echo DB alba02 exported!"
