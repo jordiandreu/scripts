@@ -21,3 +21,9 @@ function ldpath(){
     printf "%s\n" $LD_LIBRARY_PATH
     IFS=$old
 }
+
+function add2pp(){
+    echo adding `pwd` to the python path.
+    export PYTHONPATH=$PYTHONPATH:`pwd`
+    echo $PYTHONPATH
+}
